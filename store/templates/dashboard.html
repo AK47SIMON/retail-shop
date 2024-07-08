@@ -1,0 +1,55 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container-fluid">
+    <div class="row">
+        <!-- Sidebar -->
+        <div class="col-md-2 sidebar">
+            <!-- Add sidebar menu items -->
+        </div>
+
+        <!-- Main content -->
+        <div class="col-md-7">
+            <!-- Banner -->
+            <div class="banner">
+                <!-- Add promotional banner -->
+            </div>
+
+            <!-- Categories -->
+            <div class="categories">
+                {% for category in categories %}
+                    <!-- Display category -->
+                {% endfor %}
+            </div>
+
+            <!-- Popular Dishes -->
+            <div class="popular-dishes">
+                {% for dish in popular_dishes %}
+                    <!-- Display dish card -->
+                {% endfor %}
+            </div>
+
+            <!-- Recent Orders -->
+            <div class="recent-orders">
+                {% for order in recent_orders %}
+                    <!-- Display order item -->
+                {% endfor %}
+            </div>
+        </div>
+
+        <!-- Right sidebar -->
+        <div class="col-md-3">
+            <!-- User balance -->
+            <div class="user-balance">
+                <h3>Your Balance: ${{ user_balance }}</h3>
+                <!-- Add top-up button -->
+            </div>
+
+            <!-- Order summary -->
+            <div class="order-summary">
+                <!-- Add current order items and total -->
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
